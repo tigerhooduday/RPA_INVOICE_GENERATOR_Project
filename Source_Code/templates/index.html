@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEM 8 RPA Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+</head>
+<body>
+    <h1>Invoice Generator</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li style="color: red;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file">Select Excel File:</label><br>
+            <input type="file" id="file" name="file" accept=".xlsx"><br><br>
+            <label for="customer_name">Customer Name:</label><br>
+            <input type="text" id="customer_name" name="customer_name"><br><br>
+            <label for="phone_number">Phone Number:</label><br>
+            <input type="text" id="phone_number" name="phone_number"><br><br>
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date" placeholder="YYYY-MM-DD"><br><br>
+            <input type="submit" value="Generate Invoice">
+        </form>
+    </div>
+</body>
+</html>
