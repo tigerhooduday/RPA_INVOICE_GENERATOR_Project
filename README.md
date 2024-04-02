@@ -14,8 +14,8 @@ Features
 
 To run the Invoice Generator locally, follow these steps:
 
-    Clone the repository: git clone https://github.com/tigerhooduday/RPA_INVOICE_GENERATOR_Project.git
-    Install the required dependencies: pip install -r requirements.txt
+    Clone the repository: `git clone https://github.com/tigerhooduday/RPA_INVOICE_GENERATOR_Project.git`
+    Install the required dependencies: `pip install -r requirements.txt`
     Run the Flask application: python app.py
     Access the application in your web browser at http://localhost:5000
 
